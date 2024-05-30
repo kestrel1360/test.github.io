@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #dcf0f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+nav {
+    width: 200px;
+    background-color: #333;
+    color: white;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+nav .menu-title {
+    display: none;
+    font-size: 24px;
+    padding: 10px 0;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+nav ul li {
+    width: 100%;
+}
+nav ul li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+nav ul li a:hover {
+    background-color: #575757;
+}
+main {
+    margin-left: 200px;
+    padding: 20px;
+    width: calc(100% - 200px);
+    text-align: center;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: calc(100% - 200px);
+    margin-left: 200px;
+}
+section {
+    display: none;
+}
+section.active {
+    display: block;
+}
+.centered-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    cursor: pointer; 
+}
+.centered-image img {
+    max-width: 100%;
+    height: auto;
+}
+.image-caption {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+    font-family: Impact;
+    letter-spacing: 2px;
+}
+.toggle-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.toggle-section {
+    display: none;
+    margin-top: 10px;
+    text-align: left;
+    padding-left: 20px;
+}
+.gothic-bold-text {
+    font-weight: bold;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+
+@media (min-width: 581px) {
+    nav .menu-title {
+        display: block;
+    }
+}
+@media (max-width: 580px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    nav ul li {
+        margin: 0;
+    }
+    main, footer {
+        margin: 0;
+        width: 100%;
+        margin-top: 50px;
+    }
+}
+
+#about {
+    text-align: left;
+    padding-left: 100px;
+}
